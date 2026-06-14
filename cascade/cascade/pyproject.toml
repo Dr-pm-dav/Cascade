@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cascade-haleu"
+version = "0.1.0"
+description = "Advanced-reactor HALEU fuel-supply analytics: exact enrichment physics + Monte Carlo supply-demand gap (civilian LEU/HALEU, <=20% U-235)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Stefani D. W. Yates" }]
+dependencies = ["numpy>=1.24", "pandas>=2.0", "scipy>=1.10", "matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+include = ["cascade*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
